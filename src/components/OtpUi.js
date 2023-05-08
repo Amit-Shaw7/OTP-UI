@@ -64,8 +64,8 @@ function OtpUi({ userNumber, setShowOtpUi }) {
             }
           </div>
           <div className="flex justify-between items-center">
-            <button onClick={changeNum} className="text-blue-500 font-semibold">Change number</button>
-            <button onClick={resendOTP} className="text-blue-500 font-semibold">Re-send OTP</button>
+            <button type="button" onClick={changeNum} className="text-blue-500 font-semibold">Change number</button>
+            <button type="button" onClick={resendOTP} className="text-blue-500 font-semibold">Re-send OTP</button>
           </div>
           <button type="submit" className="bg-blue-500 p-2 text-white rounded-md hover:border-white ...">
             Verify OTP
