@@ -50,6 +50,7 @@ function OtpUi({ userNumber, setShowOtpUi }) {
             {
               otp.map((elem, index) => (
                 <input
+                  type="number"
                   required
                   ref={index === activeOTPIndex ? inputRef : null}
                   key={index}

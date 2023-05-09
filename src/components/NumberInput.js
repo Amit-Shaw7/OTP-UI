@@ -1,12 +1,13 @@
 import React from 'react';
 
-const NumberInput = ({ sendOTP , userNumber , setUserNumber }) => {
+const NumberInput = ({ sendOTP, userNumber, setUserNumber }) => {
     return (
         <form onSubmit={sendOTP} className='h-[100vh] w-full flex-col gap-5 flex items-center justify-center'>
             <input
                 autoFocus
-                maxLength={10}
-                minLength={10}
+                type='number'
+                maxLength="10"
+                onInput={(e) => e.target.value = e.target.value.slice(0, 10)}
                 className="border border-slate-500 text-center rounded-md h-[40px]"
                 placeholder='Enter mobile number'
                 value={userNumber}
