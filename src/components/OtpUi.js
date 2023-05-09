@@ -41,12 +41,12 @@ function OtpUi({ userNumber, setShowOtpUi }) {
 
   return (
     <div className="w-full h-[100vh] flex flex-col items-center justify-center">
-      <form onSubmit={handleSubmit} className="shadow-md">
+      <form onSubmit={handleSubmit} className="shadow-md ">
         <h3 className="text-3xl text-center">Phone verification</h3>
-        <div className="p-5 w-[400px] flex flex-col gap-5">
+        <div className="p-5 w-[300px] min-[425px]:w-[400px] flex flex-col gap-5">
           <h5 className="text-md text-center">Enter the OTP you recieved on XXXXXXX{userNumber.slice(7, 10)}</h5>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between gap-1 min-[425px]:gap-0">
             {
               otp.map((elem, index) => (
                 <input
@@ -59,7 +59,7 @@ function OtpUi({ userNumber, setShowOtpUi }) {
                   onKeyDown={(event) => handleKeyDown(event, index)}
                   // type="number"
                   name={`elem-${index}`}
-                  className="border border-slate-500 text-center rounded-md w-[45px] h-[40px]"
+                  className="border border-slate-500 text-center rounded-md w-[35px] h-[35px] min-[425px]:w-[45px] min-[425px]:h-[40px]"
                 />
               ))
             }

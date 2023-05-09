@@ -6,7 +6,9 @@ const NumberInput = ({ sendOTP, userNumber, setUserNumber }) => {
             <input
                 autoFocus
                 type='number'
+                required
                 maxLength="10"
+                minLength="10"
                 onInput={(e) => e.target.value = e.target.value.slice(0, 10)}
                 className="border border-slate-500 text-center rounded-md h-[40px]"
                 placeholder='Enter mobile number'
